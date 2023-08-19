@@ -1,0 +1,42 @@
+form{
+    width: 70%;
+    margin: var(--space-4) auto;
+    border: 1px solid var(--color-primary-700);
+    align-items: center;
+    border-radius: var(--border-radius-big);
+    background-color: var(--color-gray-700);
+    box-shadow: 2px 2px 4px var(--color-gray-700);
+}
+
+hr {
+    width: 90%;
+    background-color: var(--color-primary-700);
+    border-color: var(--color-primary-700);
+    
+ }
+
+h1 {
+    color: var(--color-gray-300);
+}
+
+form a {
+    margin: var(--space-2) auto var(--space-4) auto;
+    display: block;
+}
+
+form label {
+    display: block;
+    color: var(--color-primary-100);
+    font-family: inherit;
+}
+
+form input {
+    padding: var(--space-2);
+    width: 90%;
+    border-radius: var(--border-radius-medium);
+}
+
+form button {
+    
+}
+

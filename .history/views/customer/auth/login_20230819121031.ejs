@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../includes/head.ejs') %>
+        <link href="/styles/form.css" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('../includes/header.ejs') %>
+        <main>
+            <h1>Login</h1>
+            <form action="/login" method="POST">
+                <p>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </p>
+                <p>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" minlength="6" required>
+                </p>
+                <button>Signin</button>
+                <a href="/signup">Signup instead</a>
+            </form>
+        </main>
+        <%- include('../includes/footer.ejs') %>
+</body>
+
+</html>

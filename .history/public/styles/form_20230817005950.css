@@ -1,0 +1,23 @@
+form{
+    width: 70%;
+    margin: var(--space-4) auto;
+    border: 1px solid var(--color-primary-50);
+    align-items: center;
+    border-radius: var(--border-radius-big);
+    background-color: var(--color-primary-300);
+}
+
+hr{
+    width: 100%;
+    color: var(--color-primary-300);
+ }
+
+form a {
+    margin: var(--space-2) auto var(--space-4) auto;
+}
+
+form label {
+    display: block;
+    color: var(--color-primary-100);
+}
+
