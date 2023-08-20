@@ -49,12 +49,6 @@ function getLogin(req, res) {
 }
 
 function logout(req, res) {
-    req.session.user = null;
-    req.session.isAuth = false;
-
-    req.session.save(function(){
-        res.redirect('/login');
-    });
 
 }
 
@@ -173,13 +167,13 @@ async function login(req, res) {
     }
 
     req.session.user = {
-        id: checkUser.id,
-        email: checkUser.email,
-        fullName: checkUser.fullName,
+        id: existingUser.id,
+        email: existingUser.email,
+        fullName: existingUser.fullName,
         address: {
-            street: checkUser.street,
-            city: checkUser.city,
-            postalCode: checkUser.postalCode
+            street: existingUser.street,
+            city: existingUser.city,
+            postalCode: existingUser.postaCode
         }
     }
     req.session.isAuth = true;

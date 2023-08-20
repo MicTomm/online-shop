@@ -71,9 +71,26 @@ a {
   color: var(--color-primary-400);
 }
 
+header {
+    background-color: var(--color-gray-400);
+}
+
+header form {
+    margin: 0;
+    padding: 0;
+}
+
+header ul{
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
 /*
-<button> ha il proprio font-family, valorizzando con inherit la proprietà font-family, forzo il button
-ad assumere il valore di font family che imposto
+ <button> ha il proprio font-family, valorizzando con inherit la proprietà font-family, forzo il button
+ ad assumere il valore di font family che imposto
 */
 
 .btn {
@@ -93,3 +110,20 @@ ad assumere il valore di font family che imposto
     font-weight: 700;
 }
 
+.header-logout-btn{
+    color: var(--color-primary-400);
+    background-color: transparent;
+    border-color: transparent;
+    font-size: var(--space-4);
+    padding: 0;
+    border: none;
+    
+}
+
+.header-logout-btn:hover,
+.header-logout-btn:active{
+    background-color:transparent;
+    border-color: transparent;
+    box-shadow: none;
+    color: var(--color-primary-700);
+}

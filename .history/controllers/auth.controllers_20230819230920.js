@@ -49,7 +49,7 @@ function getLogin(req, res) {
 }
 
 function logout(req, res) {
-    req.session.user = null;
+    req.session.User = null;
     req.session.isAuth = false;
 
     req.session.save(function(){

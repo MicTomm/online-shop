@@ -9,10 +9,8 @@ form{
     box-shadow: 1px 1px 2px var(--color-primary-700);
 }
 
-.header-form{
-    background-color: transparent;
-    border-color: transparent;
-    box-shadow:none;
+nav form{
+    background-color: none;
 }
 
 hr {

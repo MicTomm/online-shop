@@ -71,6 +71,42 @@ a {
   color: var(--color-primary-400);
 }
 
+header {
+    background-color: var(--color-gray-400);
+}
+
+nav{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+header form {
+    margin: 0;
+    padding: 0;
+}
+
+header ul{
+   
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+header li {
+    padding: var(--space-4);
+}
+
+header a{
+    font-size: var(--space-6);
+}
+
+header a:hover,
+header a:active{
+    color: var(--color-primary-700);
+}    
+
 /*
 <button> ha il proprio font-family, valorizzando con inherit la proprietà font-family, forzo il button
 ad assumere il valore di font family che imposto
@@ -93,3 +129,30 @@ ad assumere il valore di font family che imposto
     font-weight: 700;
 }
 
+.header-logout-btn{
+    color: var(--color-primary-400);
+    background-color: transparent;
+    border-color: transparent;
+    font-size: var(--space-4);
+    padding: 0;
+    border: none;
+    font-size: var(--space-6);
+}   
+
+#logo{
+    font-family: 'Barriecito', cursive;
+    font-size: var(--space-6);
+    color: var(--color-primary-700);
+    padding: 0 var(--space-6);
+    
+}
+
+
+.header-logout-btn:hover,
+.header-logout-btn:active{
+    background-color:transparent;
+    border-color: transparent;
+    box-shadow: none;
+    color: var(--color-primary-700);
+    font-weight: 300;
+}

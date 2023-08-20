@@ -32,7 +32,7 @@ function getLogin(req, res) {
 
     let inputData = req.session.inputData;
 
-    if (!inputData) {
+    if(!inputData){
         inputData = sessionValidation.getSessionErrorData(
             req,
             {
@@ -45,16 +45,10 @@ function getLogin(req, res) {
 
     req.session.inputData = null;
 
-    res.render('customer/auth/login', { inputData: inputData });
+    res.render('customer/auth/login', {inputData: inputData});
 }
 
 function logout(req, res) {
-    req.session.user = null;
-    req.session.isAuth = false;
-
-    req.session.save(function(){
-        res.redirect('/login');
-    });
 
 }
 
@@ -142,30 +136,30 @@ async function login(req, res) {
         sessionValidation.flashErrorToSession(
             req,
             {
-                message: 'Error - No user with this email account is already registered',
+                message: 'Error - No user with this email account is already registered' ,
                 enteredEmail: enteredEmail,
                 enteredPassword: enteredPassword
             },
-            function () {
+            function(){
                 res.redirect('/login');
             }
         );
         return;
-    }
+    } 
 
-    console.log('enteredPassword: ' + enteredPassword);
+    console.log('enteredPassword: ' + enteredPassword );
     console.log('checkUser.password: ' + checkUser.password);
     const isValidPwd = await bcrypt.compare(enteredPassword, checkUser.password);
-
-    if (!isValidPwd) {
+    
+    if(!isValidPwd){
         sessionValidation.flashErrorToSession(
             req,
             {
                 message: 'Error - The password you have entered is wrong. Try again, please',
-                enteredEmail: enteredEmail,
+                enteredEmail: enteredEmail ,
                 enteredPassword: enteredPassword
             },
-            function () {
+            function(){
                 res.redirect('/login');
             }
         );
@@ -173,18 +167,18 @@ async function login(req, res) {
     }
 
     req.session.user = {
-        id: checkUser.id,
-        email: checkUser.email,
-        fullName: checkUser.fullName,
+        id: existingUser.id,
+        email: existingUser.email,
+        fullName: existingUser.fullName,
         address: {
-            street: checkUser.street,
-            city: checkUser.city,
-            postalCode: checkUser.postalCode
-        }
+            street: existingUser.street,
+            city: existingUser.city,
+            postalCode: existingUser.postaCode
+        } 
     }
-    req.session.isAuth = true;
+    req.session.isAuth = true; 
 
-    req.session.save(function () {
+    req.session.save(function(){
         res.redirect('/signup'); //reindirizzamento provvisorio in attesa di creazione pagine per admin ed user
     });
 

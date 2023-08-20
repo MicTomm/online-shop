@@ -10,9 +10,7 @@ form{
 }
 
 .header-form{
-    background-color: transparent;
-    border-color: transparent;
-    box-shadow:none;
+    background-color: none;
 }
 
 hr {

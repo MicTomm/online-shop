@@ -27,9 +27,10 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}));
 
 app.use(session(sessionConfiguration));
-app.use(csrf());
 
 app.use(authMiddleware.auth);
+
+app.use(csrf());
 app.use(csrfTokenMiddleware.getCsrfToken);
 
 app.use(authRoutes);
