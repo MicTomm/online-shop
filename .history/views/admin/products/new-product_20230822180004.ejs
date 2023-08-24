@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../../shared/includes/head.ejs', {title: 'Create New Product'}) %>
+    <link href="/styles/form.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('../../shared/includes/header.ejs') %>
+    <h1>Create a New Product</h1>
+    <main>
+       <%- include('includes/product-form.ejs', {submitPath: '/admin/products'}) %>
+    </main>
+    <footer>
+        <%- include('../../shared/includes/footer.ejs') %>
+    </footer>
+</body>
+</html>

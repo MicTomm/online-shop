@@ -1,0 +1,163 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    max-width: 120rem;
+    background-color: var(--color-gray-400);
+    border-bottom: 2px 2px 4px var(--color-gray-700);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: var(--space-2);
+
+}
+
+main {
+    margin-top: 4.5rem;
+    display: none;
+}
+
+#main-nav {
+    display: none;
+}
+
+header form {
+    margin: 0;
+    padding: var(--space-2);
+}
+
+.header-logout-btn {
+    color: var(--color-primary-400);
+    background-color: transparent;
+    border-color: transparent;
+    font-size: var(--space-4);
+    padding: 0;
+    border: none;
+    font-size: var(--space-6);
+}
+
+#logo {
+    font-family: 'Barriecito', cursive;
+    font-size: 2.5rem;
+    color: var(--color-primary-700);
+    padding: 0;
+    margin: 0;
+    text-shadow: 2px 2px 4px var(--color-gray-700);
+
+}
+
+.header-logout-btn:hover,
+.header-logout-btn:active {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    color: var(--color-primary-700);
+    font-weight: 300;
+}
+
+#hamburger-icon {
+    display: flex;
+    flex-flow: column;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+#hamburger-icon span {
+    margin: .2rem auto;
+    width: 2.5rem;
+    height: .35rem;
+    background-color: white;
+    border-radius: var(--border-radius-small);
+}
+
+aside {
+    margin-top: 4.1rem;
+    width: 100%;
+    height: calc(100vh - 4.5rem);
+}
+
+#mobile-nav{
+    width: 100%;
+    height: 100%;
+}
+
+#mobile-nav ul{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#mobile-nav li{
+    margin: var(--space-6) auto;
+}
+
+#mobile-nav a{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#mobile-nav a:hover,
+#mobile-nav a:active{
+    color: var(--color-primary-700);
+}
+
+/*nel media query definisco le impostazioni per display > 48rem*/
+@media(min-width: 48rem) {
+
+    header {
+        position: static;
+        padding: 1rem 1rem;
+        margin: 0 auto;
+    }
+
+    header ul {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+    }
+    
+    header li {
+        padding-left: var(--space-6);
+        margin: 0;
+    }
+
+    header div{
+        width: 30%;
+        display: flex;
+        justify-content: flex-start;    
+    }
+
+    main {
+        margin-top: 0rem;
+    }
+
+    #main-nav {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #hamburger-icon {
+        display: none;
+    }
+
+    /*aside*/
+    #mobile-menu {
+        display: none;
+    }
+
+    #main-nav a {
+        font-size: var(--space-6);
+    }
+
+    #main-nav a:hover,
+    #main-nav a:active {
+        color: var(--color-primary-700);
+    }
+    
+}

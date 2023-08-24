@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../../shared/includes/head.ejs', {title: 'Update Product'}) %>
+    <link href="/styles/form.css" rel="stylesheet">
+    <script src="/scripts/image-upload-preview.js" defer></script>
+</head>
+<body>
+    <%- include('../../shared/includes/header.ejs') %>
+    <h1>Update Product</h1>
+    <main>
+       <%- include('includes/product-form.ejs', 
+       {
+        //togliere l'underscore da id
+        submitPath: '/admin/products/'+ product.id,
+        product: product,
+        imageRequired: false
+       }
+        ) 
+       %>
+    </main>
+    <footer>
+        <%- include('../../shared/includes/footer.ejs') %>
+    </footer>
+</body>
+</html>

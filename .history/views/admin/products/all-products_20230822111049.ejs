@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../../shared/includes/head.ejs', {title: 'All Products'}) %>
+    <link href="/styles/products.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('../../shared/includes/header.ejs') %>
+    <main id="product-item-main">
+        <h1>Products Administration</h1>
+        <section>
+            <h2>Manage Products</h2>
+            <a href="/admin/products/new" class="btn">Add New Product</a>
+        </section>
+        <section>
+            <h2>List of Products</h2>
+            <% if (!products) { %>
+                <p>No product is present yet - consider to add some.</p>
+            <% } %>
+            <ul id="all-products-list">
+                <% for (const product of products) { %>
+                    <%- include('includes/product-item.ejs', {product: product}) %>
+                <% } %>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <%- include('../../shared/includes/footer.ejs') %>
+    </footer>
+</body>
+</html>

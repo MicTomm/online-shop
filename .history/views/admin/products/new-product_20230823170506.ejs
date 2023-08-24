@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../../shared/includes/head.ejs', {title: 'Create New Product'}) %>
+    <link href="/styles/form.css" rel="stylesheet">
+    <script src="/scripts/image-upload-preview.js" defer></script>
+</head>
+<body>
+    <%- include('../../shared/includes/header.ejs') %>
+    <h1>Create a New Product</h1>
+    <main>
+       <%- include('includes/product-form.ejs', {
+        submitPath: '/admin/products', 
+        product: {
+            title: '',
+            summary: '', 
+            price:'',
+            description: ''
+       },
+        imageRequired: true
+    }
+        ) 
+      %>
+    </main>
+    <footer>
+        <%- include('../../shared/includes/footer.ejs') %>
+    </footer>
+</body>
+</html>

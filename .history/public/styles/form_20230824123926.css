@@ -1,0 +1,90 @@
+form{
+    width: 70%;
+    max-width: 40rem;
+    margin: var(--space-4) auto;
+    border: 1px solid var(--color-primary-700);
+    align-items: center;
+    border-radius: var(--border-radius-big);
+    background-color: var(--color-gray-700);
+    box-shadow: 1px 1px 2px var(--color-primary-700);
+    padding: 1rem;
+}
+
+.header-form{
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow:none;
+}
+
+hr {
+    width: 90%;
+    background-color: var(--color-primary-700);
+    border-color: var(--color-primary-700);
+    
+ }
+
+form label {
+    margin-bottom: var(--space-2);
+    display: block;
+    color: var(--color-primary-100);
+    font-family: inherit;
+    font-weight: 700;
+}
+
+form input,
+form textarea {
+    padding: var(--space-2);
+    width: 90%;
+    border-radius: var(--border-radius-medium);
+    border: 1px solid transparent;
+    resize: vertical;
+}
+
+form input[type=file]{
+    resize: none;
+    padding: 0rem;
+}
+
+form a {
+    margin: var(--space-2) auto var(--space-4) auto;
+    display: block;
+}
+
+form a:hover,
+form a:active {
+    font-weight: 700;
+    color: var(--color-primary-700);
+}
+
+.error-message {
+    color: var(--color-error-500);
+    background-color: var(--color-error-100);
+    border-radius: var(--border-radius-medium);
+    padding: var(--space-2 ) var(--space-4);
+    width: 70%;
+    margin: 0 auto;
+}
+
+#image-preview-div {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#image-preview {
+    display: none;
+    height: 25rem;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+#image-preview-div p{
+
+}
+
+
+
+

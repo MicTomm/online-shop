@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../../shared/includes/head.ejs', {title: 'All Products'}) %>
+    <link href="/styles/form.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('../../shared/includes/header.ejs') %>
+    <main>
+        <h1>Products Administration</h1>
+        <section>
+            <h2>Manage Products</h2>
+            <a href="/admin/products/new" class="btn">Add New Product</a>
+        </section>
+        <section>
+            <ul>
+                <% for (const product of products) { %>
+                    <%- include('includes/product-item.ejs', {product: product}) %>
+                <% } %>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <%- include('../../shared/includes/footer.ejs') %>
+    </footer>
+</body>
+</html>

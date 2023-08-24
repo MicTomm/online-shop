@@ -1,0 +1,14 @@
+#all-products-list li {
+    width: 80%;
+    margin: 0rem auto;
+    background-color: rgb(121, 98, 98);
+    padding: var(--space-4);
+}
+
+#product-item{
+    
+}
+
+#product-item h2 {
+    font-size: 1rem;
+}

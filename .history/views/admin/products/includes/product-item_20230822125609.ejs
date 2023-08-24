@@ -1,0 +1,12 @@
+<li>
+    <article id="product-item">
+        <img src="<%=product.url%>" alt="<%=product.title%>">
+        <div id="product-item-content">
+            <h2><%=product.title%></h2>
+            <div id="product-item-action">
+                <a href="/admin/products/<%= product.id %>" class="btn">View & Edit</a>
+                <button class="btn btn-reset">Delete</button>
+            </div>    
+        </div>
+    </article>
+</li>

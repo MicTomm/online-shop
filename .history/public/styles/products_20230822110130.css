@@ -1,0 +1,12 @@
+#all-products-list li {
+    width: 80%;
+    margin: 0rem auto;
+}
+
+#product-item{
+    
+}
+
+#product-item h2 {
+    font-size: 1rem;
+}

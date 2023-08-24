@@ -1,0 +1,15 @@
+/*rgb(121, 98, 98)*/
+
+#all-products-list li {
+    width: 80%;
+    margin: 0rem auto;
+    background-color: var(--color-gray-300);
+    padding: var(--space-4);
+    border-radius: var(--border-radius-medium);
+    box-shadow: 2px 2px 4px var(--color-gray-700);
+}
+
+#product-item h2 {
+    color: var(--color-gray-50);
+    font-size: 1rem;
+}
