@@ -1,0 +1,71 @@
+#product-item-main hr{
+    border-color: var(--color-primary-700);
+    margin: var(--space-8) 0rem;
+}
+
+/*ul*/
+.all-products-list{
+    padding: var(--space-2);
+    display: grid;
+    /*  repeat    = metodo che ripete lo stesso setting per più colonne
+        auto-fill = il numero di colonne generato viene deciso automaticamente e dinamicamente dal browser in base allo spazio (larghezza)
+                    disponibile sullo schermo
+        minmax(15rem, 1fr) = metodo per stabilire la dimensione di una colonna
+                                - 15rem => min width
+                                - 1fr => max width. 
+                                         1fr vuol dire che il browser può dividere lo spazio disponibile sullo schermo nel massimo numero
+                                         di colonne di uguale dimensione tra loro  
+                    */
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: var(--space-4);
+}
+
+.all-products-list li {
+    width: 100%;
+    margin: 0rem auto;
+    background-color: var(--color-gray-300);
+    border-radius: var(--border-radius-medium);
+    box-shadow: 2px 2px 4px var(--color-gray-700);
+    overflow: hidden;
+}
+
+#product-item h2 {
+    color: var(--color-gray-50);
+    font-size: 1.25rem;
+    margin-top: 0;
+}
+
+#product-item img{
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: 30%;
+}
+
+#product-item-content{
+    padding: var(--space-4);
+}
+
+#product-item-action{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#product-item-action .btn{
+    margin: var(--space-1);
+}
+
+/*product detail*/
+#product-detail-header{
+    display: flex;
+    flex-flow: row;
+    height: 25rem;
+}
+
+#product-detail-header div {
+    display: flex;
+    flex-flow: column;
+}
+

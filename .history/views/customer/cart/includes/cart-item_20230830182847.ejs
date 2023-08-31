@@ -1,0 +1,21 @@
+<li>
+    <article id="cart-item">
+        <div class="cart-item-info">
+            <h2><%= item.product.title %></h2>
+            <price>
+                <span><%= item.itemTotalPrice.toFixed(2)%></span>€ (Pz. 
+                <span><%= item.product.price.toFixed(2) %></span>€)
+            </price>
+        </div>
+
+        <div class="cart-item-management">
+            <% if (inputData.hasError) { %>
+                <p><%= inputData.message %></p>
+            <% } %>
+            <form data-productid="<%= item.product.id %>" data-csrf="<%= locals.csrfToken %>">
+                <input type="number" value="<%= item.itemTotalQuantity %>" required>
+                <button class="btn btn-reset">Update</button>
+            </form>
+        </div>
+    </article>
+</li>

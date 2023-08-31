@@ -1,0 +1,11 @@
+#cart-item {
+    display: flex;
+    flex-flow: column;
+    padding: var(--space-4)
+}
+
+@media (min-width: 48rem) {
+    #cart-item {
+        flex-flow: row;
+    }
+}

@@ -1,0 +1,13 @@
+#cart-item {
+    display: flex;
+    flex-flow: column;
+    padding: var(--space-4);
+    background-color: var(--color-gray-700);
+    border-radius: var(--border-radius-medium);
+}
+
+@media (min-width: 48rem) {
+    #cart-item {
+        flex-flow: row;
+    }
+}

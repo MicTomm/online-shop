@@ -1,0 +1,14 @@
+<%- include('../../shared/includes/head.ejs', { title: 'Cart' }) %>
+</head>
+<body>
+  <%- include('../../shared/includes/header.ejs') %>
+  <main>
+      <ul>
+        <% for ( const item of locals.cart.items) { %>
+            <%- include('includes/cart-item.ejs') %>
+        <% } %>
+      </ul>
+  </main>
+  <%- include('../../shared/includes/footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../../shared/includes/head.ejs', {title: 'Product Details'}) %>
+    <link href="/styles/products.css" rel="stylesheet">
+    <link href="/styles/product-details.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('../../shared/includes/header.ejs') %>
+    <main id="product-detail-main">
+        <article id="product-detail-article">
+            <header id="product-detail-header">
+                    <img src="<%= product.url %>" alt="<%= product.title %>">
+                    <div>
+                
+                    <h2><%= product.title %></h2>
+                    <price><%= product.price %>€</price>
+                    <button class="btn">Add to Cart</button>
+                </div>
+            </header>
+            <hr/>
+            <div id="product-detail-content">
+                <p><%= product.summary %></p>
+                <p><%= product.description %></p>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <%- include('../../shared/includes/footer.ejs') %>
+    </footer>
+</body>
+</html>

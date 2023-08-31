@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../../shared/includes/head.ejs', {title: 'Product Details'}) %>
+    <link href="/styles/products.css" rel="stylesheet">
+</head>
+<body>
+    
+    </header>
+    <main>
+        <header id="product-detail-header">
+            <img src="<%= product.image %>" alt="product-image">
+            <div>
+                <p><%= product.image %></p>
+                <p><%= product.id %></p>
+                <h2><%= product.title %></h2>
+                <price><%= product.price %>€</price>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </header>
+        <div id="product-detail-content">
+            <p><%= product.summary %></p>
+            <p><%= product.description %></p>
+        </div>
+    </main>
+</body>
+</html>

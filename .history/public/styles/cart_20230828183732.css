@@ -1,0 +1,23 @@
+#cart-item {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-4);
+    background-color: var(--color-gray-700);
+    border-radius: var(--border-radius-medium);
+    margin: var(--space-4) auto;
+}
+
+#cart-item h2 {
+    color: var(--color-gray-100);
+    margin-top: 0;
+}
+
+@media (min-width: 48rem) {
+    #cart-item {
+        width:80%;
+        flex-flow: row;
+        justify-content: space-between;
+    }
+}
