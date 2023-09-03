@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../../shared/includes/head.ejs', {title: 'Admin Orders'}) %>
+    <link href="/styles/products.css" rel="stylesheet">
+    <script src="/scripts/delete-product.js" defer></script>
+</head>
+<body>
+    <%- include('../../shared/includes/header.ejs') %>
+    <main id="product-item-main">
+        <h1>Orders Administration</h1>
+            <ul class="all-products-list">
+                <% for (const order of orders) { %>
+                    <%- include('../../shared/includes/order-item.ejs') %>
+                <% } %>
+            </ul>
+    </main>
+    <footer>
+        <%- include('../../shared/includes/footer.ejs') %>
+    </footer>
+</body>
+</html>

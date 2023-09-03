@@ -1,0 +1,17 @@
+<li class="order-item">
+    <article>
+        <header class="order-header">
+            <h2><span><%= order.productData.cartTotalPrice.toFixed(2) %></span>€ - <span> <%= order.formattedDate %></span></h2>
+            <p><span class="badge"><%= order.status.toUpperCase() %></span></p>
+        </header>
+        <section class="order-details">
+            <ol> 
+                <% for (const item of order.productData.items) { %>
+                    <li>
+                        <%= item.product.title %> - $<%= item.itemTotalPrice.toFixed(2) %> ($<%= item.product.price.toFixed(2) %> x <%= item.itemTotalQuantity %>)
+                    </li>
+                <% } %>
+            </ol>
+        </section>
+    </article>
+</li>

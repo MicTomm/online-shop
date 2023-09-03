@@ -1,0 +1,18 @@
+#all-products-list{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.order-item {
+    background-color: var(--color-gray-400);
+    border-radius: var(--border-radius-small);
+    padding: var(--space-4);
+    margin: var(--space-4) 0;
+  }
+
+
+@media(min-width: 48rem) {
+    
+}

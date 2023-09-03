@@ -1,0 +1,28 @@
+<%- include('../../shared/includes/head.ejs', { title: 'Cart' }) %>
+<link href="/styles/cart.css" rel="stylesheet">
+<script src="/scripts/update-cart.js" defer></script>
+<script src="/scripts/place-order.js" defer></script>
+</head>
+<body>
+  <%- include('../../shared/includes/header.ejs') %>
+  <main>
+    <h1>Cart Items</h1>
+    <ul>
+        <% for ( const item of locals.cart.items) { %>
+            <%- include('includes/cart-item.ejs', {item: item} ) %>
+        <% } %>
+    </ul>
+    <div id="cart-total">
+      <form data-csrf="<%= locals.csrfToken %>">
+        <p>Total: <span><%= locals.cart.cartTotalPrice.toFixed(2) %></span>€</p>
+        <% if (locals.isAuth) { %>
+          <button class="btn">Buy Products</button>
+        <% } else { %>
+          <p>Login to place your order, please</p>
+        <% } %>
+      </form>  
+    </div>
+  </main>
+  <%- include('../../shared/includes/footer.ejs') %>
+</body>
+</html>
