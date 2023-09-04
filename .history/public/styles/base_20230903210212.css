@@ -1,0 +1,113 @@
+/*
+    border-box è una proprietà non ereditabile, quindi la assegno ad ogni elemento tramite il segno *(all)
+    Quando ereditabili, è sempre più efficiente stabilire una regola e sfruttare l'ereditarietà
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+
+    --color-gray-50: rgb(243, 236, 230);
+    --color-gray-100: rgb(207, 201, 195);
+    --color-gray-300: rgb(99, 92, 86);
+    --color-gray-400: rgb(70, 65, 60);
+    --color-gray-500: rgb(37, 34, 31);
+    --color-gray-600: rgb(32, 29, 26);
+    --color-gray-700: rgb(31, 26, 22);
+
+    --color-primary-50: rgb(253, 224, 200);
+    --color-primary-100: rgb(253, 214, 183);
+    --color-primary-200: rgb(250, 191, 143);
+    --color-primary-400: rgb(223, 159, 41);
+    --color-primary-500: rgb(212, 136, 14);
+    --color-primary-700: rgb(212, 120, 14);
+    --color-primary-200-contrast: rgb(100, 46, 2);
+    --color-primary-500-contrast: white;
+
+    --color-error-100: rgb(255, 192, 180);
+    --color-error-500: rgb(199, 51, 15);
+
+    --color-primary-500-bg: rgb(63, 60, 58);
+
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-4: 1rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+
+    --border-radius-small: 4px;
+    --border-radius-medium: 6px;
+    --border-radius-big: 8px;
+
+    --shadow-medium: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--color-gray-500);
+    color: var(--color-gray-50);
+}
+
+main {
+    width: 90%;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+  text-decoration: none;  
+  color: var(--color-primary-400);
+}
+
+/*
+<button> ha il proprio font-family, valorizzando con inherit la proprietà font-family, forzo il button
+ad assumere il valore di font family che imposto
+*/
+
+h1,
+h2 {
+    color: var(--color-gray-300);
+}
+
+.btn {
+    cursor: pointer;
+    font-family: inherit;
+    background-color: var(--color-primary-500);
+    color: var(--color-primary-50);
+    border: 1px solid var(--color-primary-700);
+    border-radius: var(--border-radius-big);
+    padding: var(--space-2) var(--space-4);
+}
+
+.btn:hover,
+.btn:active {
+    background-color: var(--color-primary-700);
+    box-shadow: 1px 1px 4px var(--color-gray-700);
+   
+}
+
+.btn-reset{
+    background-color: transparent;
+    font-size: 1rem;
+    border: 1px solid var(--color-primary-500);
+}
+
+.btn-reset:hover,
+.btn-reset:active{
+    
+    background-color: var(--color-gray-400);
+}
+
+
