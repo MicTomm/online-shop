@@ -8,8 +8,7 @@ router.get('/', orderControllers.getOrders);
 
 router.post('/', orderControllers.placeOrder);
 
-router.get('/success', orderControllers.getSuccess);
-
+router.get('/success', orderControllers.getSucces);
 router.get('/cancel', orderControllers.getCancel);
 
 module.exports = router;

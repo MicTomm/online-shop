@@ -5,7 +5,7 @@ const { render } = require('ejs');
 
 const stripeObj = stripe('sk_test_51Nmcc2CxykYhD7wLC6YKTrXPyTtZKyEUAyAYCqIbyOByLEtAli7admFptadkCnphQEN278fEMV3bWhlOkgVNkwzN003yUIc8tE');
 
-const DOMAIN = 'http://localhost:3000';
+const DOMAIN = 'http://localhost:3000'
 
 async function getOrders(req, res, next) {
     

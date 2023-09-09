@@ -5,7 +5,7 @@ const { render } = require('ejs');
 
 const stripeObj = stripe('sk_test_51Nmcc2CxykYhD7wLC6YKTrXPyTtZKyEUAyAYCqIbyOByLEtAli7admFptadkCnphQEN278fEMV3bWhlOkgVNkwzN003yUIc8tE');
 
-const DOMAIN = 'http://localhost:3000';
+const DOMAIN = 'http://localhost:3000'
 
 async function getOrders(req, res, next) {
     
@@ -37,7 +37,11 @@ async function placeOrder(req, res, next) {
         return next(error);
     }
 
+    // let isCartEmpty = false;
      req.session.cart = null;
+    // if(!req.session.cart){
+    //     isCartEmpty = true;
+    // }
     
     const session = await stripeObj.checkout.sessions.create({
         payment_method_types: ['card'],
@@ -59,7 +63,13 @@ async function placeOrder(req, res, next) {
     });
 
       res.redirect(303, session.url);
- 
+    
+
+    // res.status(201).json({
+    //     message: 'Order saved into DB',
+    //     orderId: savedOrder.insertedId.toString(),
+    //     isCartEmpty: isCartEmpty
+    // });
 }
 
 function getSuccess(req, res){

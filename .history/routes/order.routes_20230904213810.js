@@ -9,7 +9,6 @@ router.get('/', orderControllers.getOrders);
 router.post('/', orderControllers.placeOrder);
 
 router.get('/success', orderControllers.getSuccess);
-
 router.get('/cancel', orderControllers.getCancel);
 
 module.exports = router;

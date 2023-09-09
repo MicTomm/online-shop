@@ -14,13 +14,14 @@
     </ul>
     <div id="cart-total">
       <form action="/orders/" method="POST">
-        <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+        <input type="hidden" _csrf="<%= locals.csrfToken %>" name="_csrf">
         <p>Total: <span><%= locals.cart.cartTotalPrice.toFixed(2) %></span>€</p>
         <p id="order-placed-message">Your order has been placed. Click <a href="/orders/">here</a> to visit your order's page</p>
         <%if (locals.isAuth && locals.cart.items.length > 0) { %>
           <button class="btn">Buy Products</button>
         <% } else { %>
-          <p>First add some item into your cart and login to place an order, thanks.</p>
+          <p>Add some item to your cart to place an order, please.<br/>
+             Remember to login if you're still not, thanks. </p>
         <% } %>
       </form>  
     </div>
