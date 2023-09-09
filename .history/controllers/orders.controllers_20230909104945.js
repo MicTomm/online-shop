@@ -21,10 +21,10 @@ async function getOrders(req, res, next) {
     res.render('customer/orders/your-orders', {orders: orders});
 }
 
-async function placeOrder(req, res) {
+async function placeOrder(req, res, next) {
 
     const cart = req.session.cart;
-    // const userData = req.session.user;
+    const userData = req.session.user;
      
     // const order = new Order(cart, userData);
 
@@ -78,7 +78,6 @@ async function getSuccess(req, res, next){
         return next(error);
     }
 
-    res.locals.cart.cartTotalQuantity = 0;
     req.session.cart = null;
 
     res.render('customer/orders/success');

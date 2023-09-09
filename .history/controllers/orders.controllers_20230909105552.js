@@ -78,7 +78,6 @@ async function getSuccess(req, res, next){
         return next(error);
     }
 
-    res.locals.cart.cartTotalQuantity = 0;
     req.session.cart = null;
 
     res.render('customer/orders/success');
